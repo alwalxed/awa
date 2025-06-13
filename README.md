@@ -1,6 +1,6 @@
 # Awa's Personal Blog
 
-Minimal personal blog built with Astro, TypeScript, and Tailwind CSS.
+Minimal personal blog built with Astro. Designed for simplicity and performance.
 
 ## Features
 
