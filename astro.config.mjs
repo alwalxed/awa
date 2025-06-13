@@ -7,7 +7,11 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   site: "https://alwalxed.com",
   output: "static",
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    platformProxy: {
+      enabled: true,
+    },
+  }),
   integrations: [mdx(), sitemap(), tailwind()],
   markdown: {
     shikiConfig: {
