@@ -1,0 +1,31 @@
+{
+  "name": "awa",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro build && wrangler pages dev",
+    "astro": "astro",
+    "deploy": "astro build && wrangler pages deploy",
+    "cf-typegen": "wrangler types"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^12.5.2",
+    "@astrojs/mdx": "^4.0.3",
+    "@astrojs/rss": "^4.0.9",
+    "@astrojs/sitemap": "^3.2.4",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.7.10"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250504.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.0",
+    "reading-time": "^1.5.0",
+    "shiki": "^1.26.0",
+    "tailwindcss": "3",
+    "wrangler": "^4.14.1"
+  }
+}

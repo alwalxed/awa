@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="not found"
+  description="the page you're looking for doesn't exist."
+>
+  <div class="text-center py-16 space-y-6">
+    <div class="space-y-4">
+      <h1 class="text-6xl font-bold text-slate-500">404</h1>
+      <h2 class="text-2xl font-semibold text-slate-300">page not found</h2>
+      <p class="text-slate-400 max-w-md mx-auto">
+        the page you're looking for doesn't exist or has been moved.
+      </p>
+    </div>
+
+    <div class="pt-8">
+      <a
+        href="/"
+        class="inline-flex items-center px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-100 rounded-lg border border-slate-600 transition-colors"
+      >
+        ← back to home
+      </a>
+    </div>
+  </div>
+</Layout>
