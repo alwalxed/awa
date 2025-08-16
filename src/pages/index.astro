@@ -12,11 +12,7 @@ const articles = await getCollection("articles");
   <div class="space-y-12">
     <section class="space-y-6">
       {
-        articles.length === 0 ? (
-          <div class="text-center py-12 text-slate-400">
-            <p>{"No articles yet. Coming soon...".toLowerCase()}</p>
-          </div>
-        ) : (
+        articles.length === 0 ? null : (
           <div class="grid gap-6">
             {articles.map((article) => (
               <article class="article-card bg-slate-800 p-6 rounded-lg border border-slate-700">
