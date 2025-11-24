@@ -1,56 +1,11 @@
 ---
-import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
-
-const articles = await getCollection("articles");
+import SocialLinks from "../components/SocialLinks";
 ---
 
 <Layout
   title="index"
-  description="i write about software, share what i'm learning, and document my journey. this site is my public notebook, personal but written with others in mind."
+  description="simple personal site"
 >
-  <div class="space-y-12">
-    <section class="space-y-6">
-      {
-        articles.length === 0 ? null : (
-          <div class="grid gap-6">
-            {articles.map((article) => (
-              <article class="article-card bg-slate-800 p-6 rounded-lg border border-slate-700">
-                <div class="space-y-3">
-                  <h3 class="text-xl font-semibold">
-                    <a
-                      href={`/articles/${article.slug}`}
-                      class="hover:text-blue-400"
-                    >
-                      {article.data.title.toLowerCase()}
-                    </a>
-                  </h3>
-
-                  <p class="text-slate-300 leading-relaxed">
-                    {article.data.excerpt.toLowerCase()}
-                  </p>
-
-                  <div class="flex items-center justify-between pt-2">
-                    <div class="flex flex-wrap gap-2">
-                      {article.data.tags?.map((tag) => (
-                        <span class="text-xs bg-slate-700 px-2 py-1 rounded">
-                          {tag.toLowerCase()}
-                        </span>
-                      ))}
-                    </div>
-                    <a
-                      href={`/articles/${article.slug}`}
-                      class="text-blue-400 hover:text-blue-300 text-sm font-medium"
-                    >
-                      more →
-                    </a>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        )
-      }
-    </section>
-  </div>
+  <SocialLinks />
 </Layout>

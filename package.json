@@ -13,10 +13,13 @@
   "dependencies": {
     "@astrojs/cloudflare": "^12.5.2",
     "@astrojs/mdx": "^4.0.3",
+    "@astrojs/react": "^4.4.2",
     "@astrojs/rss": "^4.0.9",
     "@astrojs/sitemap": "^3.2.4",
     "@astrojs/tailwind": "^6.0.2",
-    "astro": "^5.7.10"
+    "astro": "^5.7.10",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20250504.0",

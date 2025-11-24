@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import PageLayout from "../components/Layout";
 
 export interface Props {
   title: string;
@@ -43,76 +44,11 @@ const fullTitle =
     <meta name="twitter:creator" content="@alwalxed" />
     <meta name="theme-color" content="#0f172a" />
     <meta name="color-scheme" content="dark" />
-    <link rel="sitemap" href="/sitemap.xml" />
   </head>
 
-  <body class="min-h-svh bg-slate-900 text-slate-100">
-    <div
-      class="min-h-svh grid grid-rows-[auto_1fr_auto] max-w-4xl mx-auto px-4 py-8"
-    >
-      <header
-        class="mb-16 pt-8 border-t border-slate-700 text-slate-400 text-sm opacity-0"
-      >
-        <div class="grid grid-cols-[1fr_auto] items-center gap-4">
-          <p class="justify-self-start">built & open-sourced blog</p>
-          <a
-            class="underline underline-offset-4 hover:text-slate-300 transition-colors justify-self-end"
-            href="https://github.com/alwalxed/awa"
-          >
-            repository
-          </a>
-        </div>
-      </header>
-
-      <main class="w-full">
-        <slot />
-      </main>
-
-      <footer class="mt-12">
-        <nav class="grid grid-cols-[auto_1fr] items-center gap-4">
-          <a href="/" class="justify-self-start">
-            <img src="/favicon-32x32.png" height="32" width="32" alt="Logo" />
-          </a>
-
-          <div
-            class="grid grid-flow-col auto-cols-max gap-3 md:gap-6 justify-self-end"
-          >
-            <a
-              href="https://instagram.com/alwalexd"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hover:text-blue-400 transition-colors"
-            >
-              insta
-            </a>
-            <a
-              href="https://x.com/alwalxed"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hover:text-blue-400 transition-colors"
-            >
-              twitter
-            </a>
-
-            <a
-              href="https://github.com/alwalxed"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hover:text-blue-400 transition-colors"
-            >
-              git
-            </a>
-            <a
-              href="mailto:hey@alwalxed.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hover:text-blue-400 transition-colors"
-            >
-              mail
-            </a>
-          </div>
-        </nav>
-      </footer>
-    </div>
+  <body class="w-full min-h-svh bg-slate-900 text-slate-100 flex justify-center items-center">
+    <PageLayout>
+      <slot />
+    </PageLayout>
   </body>
 </html>
